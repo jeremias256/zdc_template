@@ -10,11 +10,11 @@ export const LoginLayout = () => {
 	};
 	return (
 		<div className='bg-primary'>
-			<header className='bg-secondary px-2'>
+			<header className='bg-secondary px-2 py-2'>
 				<nav className='flex items-end justify-between gap-2'>
 					<div className='flex gap-1 items-end'>
-						<p className='text-warning text-logo leading-none'>Fit</p>
-						<p className='ml-2 text-lg text-info font-bold leading-none'>
+						<p className='text-text text-logo leading-none'>Fit</p>
+						<p className='ml-2 text-lg text-text font-bold leading-none'>
 							Residential
 						</p>
 						<SeparadorV
@@ -22,7 +22,7 @@ export const LoginLayout = () => {
 							h='h-5'
 							mx='mx-1'
 						/>
-						<p className='text-lg text-info text-bold font-bold leading-none'>
+						<p className='text-lg text-text text-bold font-bold leading-none'>
 							Corporate
 						</p>
 						<SeparadorV
@@ -30,7 +30,7 @@ export const LoginLayout = () => {
 							h='h-5'
 							mx='mx-1'
 						/>
-						<p className='text-lg text-info text-bold font-bold leading-none'>
+						<p className='text-lg text-text text-bold font-bold leading-none'>
 							Rural
 						</p>
 					</div>
@@ -39,13 +39,13 @@ export const LoginLayout = () => {
 						type='button'>
 						{open ? (
 							<FontAwesomeIcon
-								className='text-info'
+								className='text-primary'
 								icon={faBars}
 								size='xl'
 							/>
 						) : (
 							<FontAwesomeIcon
-								className='text-info'
+								className='text-primary'
 								icon={faX}
 								size='xl'
 							/>
@@ -53,45 +53,56 @@ export const LoginLayout = () => {
 					</button>
 				</nav>
 			</header>
-			<main className='bg-secondary pt-4 px-2 pb-6'>
-				<div className='bg-primary rounded-2xl flex items-center justify-center flex-col'>
+			<main className='pt-4 px-2 pb-6'>
+				<div className='bg-secondary rounded-2xl flex items-center justify-center flex-col py-4'>
 					<h2 className='mt-4 text-base text-text font-bold'>
 						Hello! Welcome to
 					</h2>
-					<h2 className='text-base text-success font-extrabold'>ZDC Fit</h2>
+					<h2 className='text-xl text-warning font-bold'>ZDC Fit</h2>
 
 					<form className='mt-8 flex flex-col items-center justify-center gap-8'>
 						<fieldset className='relative'>
 							<label
-								className='text-xs italic text-info absolute top-[-12px] bg-primary px-2 ml-2'
-								htmlFor='customerNumber'>
+								className='text-xs italic text-text rounded-t-2xl absolute top-[-15px] bg-primary px-2 ml-2 -left-2 font-inter'
+								htmlFor='password'>
 								customer id
 							</label>
 							<input
-								className='top-0 text-info rounded-2xl bg-white h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
+								className='top-0 text-text rounded-tr-2xl rounded-b-2xl bg-white h-12 pl-3 pt-3 focus:outline-none focus:border-2 focus:border-primary min-w-[300px] font-inter'
 								id='customerNumber'
 								type='text'
 							/>
-							<p className='text-xs text-center hover:outline text-info'>
+							<p className='text-xs text-center hover:outline text-text mt-2'>
 								I don t know my customer number
 							</p>
 						</fieldset>
 
 						<fieldset className='relative'>
 							<label
-								className='text-xs italic text-info absolute top-[-12px] bg-primary px-2 ml-2'
+								className='text-xs italic text-text rounded-t-2xl absolute top-[-15px] bg-primary px-2 ml-2 -left-2 font-inter'
 								htmlFor='password'>
 								password
 							</label>
 							<input
-								className='top-0 text-info rounded-2xl bg-white h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
+								className='top-0 text-text rounded-tr-2xl rounded-b-2xl bg-white h-12 pl-3 pt-3 focus:outline-none focus:border-2 focus:border-primary min-w-[300px] font-inter'
 								id='password'
-								type='text'
+								type='password'
 							/>
-							<p className='text-xs text-center hover:outline text-info'>
+							<p className='text-xs text-center hover:outline text-text mt-2'>
 								I forgot my password
 							</p>
 						</fieldset>
+
+						<button
+							className='h-9 rounded-2xl bg-primary w-full max-w-32 text-text font-bold'
+							type='submit'>
+							LOGIN
+						</button>
+
+						<p className='text-xs text-center hover:outline text-text mt-2'>
+							If you re not a customer, get a plan{' '}
+							<span className='text-primary underline'>with us</span>
+						</p>
 					</form>
 				</div>
 			</main>

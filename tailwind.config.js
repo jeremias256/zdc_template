@@ -8,12 +8,12 @@ export default {
 			},
 			colors: {
 				primary: '#f6eddc',
-				secondary: '#e3e5d7',
+				secondary: '#a5c8ca',
 				success: '#bdd6d2',
-				danger: '#c4594b',
+				//danger: '#c4594b',
 				warning: '#f18052',
-				text: '#a5c8ca',
-				info: '#586875',
+				text: '#586875',
+				//info: '#e3e5d7',
 			},
 			fontFamily: {
 				nunito: ['Nunito', 'sans-serif'],
@@ -24,7 +24,6 @@ export default {
 			fontSize: {
 				base: '15px',
 				title: '24px',
-				logo2: '32px',
 				logo: '40px',
 			},
 			screens: {
