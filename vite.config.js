@@ -14,7 +14,6 @@ export default defineConfig({
 		alias: {
 			api: resolve(__dirname, 'src/api'),
 			assets: resolve(__dirname, 'src/assets'),
-			pages: resolve(__dirname, 'src/pages'),
 			router: resolve(__dirname, 'src/routes'),
 			hooks: resolve(__dirname, 'src/hooks'),
 			store: resolve(__dirname, 'src/store'),

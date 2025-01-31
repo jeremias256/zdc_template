@@ -1,4 +1,35 @@
-/* src/input.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    /* colores */
+    .primary {
+        @apply text-primary;
+    }
+
+    .secondary {
+        @apply text-secondary;
+    }
+
+    .success {
+        @apply text-success;
+    }
+
+    .danger {
+        @apply text-danger;
+    }
+
+    .warning {
+        @apply text-warning;
+    }
+
+    .text {
+        @apply text-text;
+    }
+
+    .info {
+        @apply text-info;
+    }
+}

@@ -1,11 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
-import { Page1 } from 'pages';
+import { BrowserRouter, Route, Routes } from 'react-router';
+
+import { LoginLayout } from '../auth/layout';
 
 export const AppRouter = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path='/' element={<Page1 />} />
+				<Route
+					element={<LoginLayout />}
+					path='/'
+				/>
 			</Routes>
 		</BrowserRouter>
 	);

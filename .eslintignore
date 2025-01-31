@@ -1,3 +1,4 @@
 dist
 taillwind.config.js
 vite.config.js
+/src/input.css
