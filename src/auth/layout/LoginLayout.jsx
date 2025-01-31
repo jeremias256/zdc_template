@@ -9,7 +9,7 @@ export const LoginLayout = () => {
 		setOpen(!open);
 	};
 	return (
-		<div className='bg-primary'>
+		<div className=''>
 			<header className='bg-secondary px-2'>
 				<nav className='flex items-end justify-between gap-2'>
 					<div className='flex gap-1 items-end'>
@@ -54,21 +54,19 @@ export const LoginLayout = () => {
 				</nav>
 			</header>
 			<main className='bg-secondary pt-4 px-2 pb-6'>
-				<div className='bg-primary rounded-2xl flex items-center justify-center flex-col'>
-					<h2 className='mt-4 text-base text-text font-bold'>
+				<div className='bg-[#fff] rounded-2xl flex items-center justify-center flex-col py-6'>
+					<h2 className='mt-4 text-info text-base font-bold'>
 						Hello! Welcome to
 					</h2>
-					<h2 className='text-base text-success font-extrabold'>ZDC Fit</h2>
+					<h2 className='text-base text-info font-extrabold'>ZDC Fit</h2>
 
 					<form className='mt-8 flex flex-col items-center justify-center gap-8'>
 						<fieldset className='relative'>
-							<label
-								className='text-xs italic text-info absolute top-[-12px] bg-primary px-2 ml-2'
-								htmlFor='customerNumber'>
+							<label className='text-xs italic text-white absolute top-[-12px] px-2 ml-2 capitalize bg-info rounded-lg py-1' htmlFor='customerNumber'>
 								customer id
 							</label>
 							<input
-								className='top-0 text-info rounded-2xl bg-white h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
+								className='top-0 text-info rounded-2xl bg-primary h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
 								id='customerNumber'
 								type='text'
 							/>
@@ -79,12 +77,12 @@ export const LoginLayout = () => {
 
 						<fieldset className='relative'>
 							<label
-								className='text-xs italic text-info absolute top-[-12px] bg-primary px-2 ml-2'
+								className='text-xs italic text-white absolute top-[-12px] bg-info py-1 rounded-lg capitalize px-2 ml-2'
 								htmlFor='password'>
 								password
 							</label>
 							<input
-								className='top-0 text-info rounded-2xl bg-white h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
+								className='top-0 text-info rounded-2xl bg-primary h-[48px] pl-3 pt-3 focus:outline-none focus:border-2 focus:border-info min-w-[300px]'
 								id='password'
 								type='text'
 							/>
