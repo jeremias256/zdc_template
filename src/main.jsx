@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { AppRouter } from 'router';
 import { store } from 'store';
 
-import './output.css';
+import './input.css';
 
 const container = document.getElementById('root');
 if (container) {

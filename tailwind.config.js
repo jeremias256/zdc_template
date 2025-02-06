@@ -8,12 +8,15 @@ export default {
 			},
 			colors: {
 				primary: '#f6eddc',
-				secondary: '#a5c8ca',
+				secondary: '#EDF4FC',
 				success: '#bdd6d2',
 				//danger: '#c4594b',
 				warning: '#f18052',
 				text: '#586875',
 				//info: '#e3e5d7',
+				'custom-light-blue': '#698bce',
+				'custom-medium-blue': '#4675d2',
+				'custom-dark-blue': '#1958d7',
 			},
 			fontFamily: {
 				nunito: ['Nunito', 'sans-serif'],
