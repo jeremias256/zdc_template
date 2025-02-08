@@ -12,12 +12,15 @@ export default defineConfig({
 	base: '/',
 	resolve: {
 		alias: {
-			api: resolve(__dirname, 'src/api'),
 			assets: resolve(__dirname, 'src/assets'),
+			auth: resolve(__dirname, 'src/features/auth'),
+			components: resolve(__dirname, 'src/components'),
+			pages: resolve(__dirname, 'src/features/pages'),
+			//probar
+			api: resolve(__dirname, 'src/api'),
 			router: resolve(__dirname, 'src/routes'),
 			hooks: resolve(__dirname, 'src/hooks'),
 			store: resolve(__dirname, 'src/store'),
-			componentsUI: resolve(__dirname, 'src/components'),
 			env: resolve(__dirname, 'src/Env'),
 		},
 	},

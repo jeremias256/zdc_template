@@ -3,57 +3,56 @@
 @tailwind utilities;
 
 @layer components {
+	/* colores */
+	.primary {
+		@apply text-primary;
+	}
 
-    /* colores */
-    .primary {
-        @apply text-primary;
-    }
+	.secondary {
+		@apply text-secondary;
+	}
 
-    .secondary {
-        @apply text-secondary;
-    }
+	.success {
+		@apply text-success;
+	}
 
-    .success {
-        @apply text-success;
-    }
+	.warning {
+		@apply text-warning;
+	}
 
-    .danger {
-        @apply text-danger;
-    }
+	.text {
+		@apply text-text;
+	}
 
-    .warning {
-        @apply text-warning;
-    }
-
-    .text {
-        @apply text-text;
-    }
-
-    .info {
-        @apply text-info;
-    }
+	/* font */
+	.font_20_400 {
+		@apply font-inter text-xl font-normal not-italic leading-normal;
+	}
+	.font_16_400 {
+		@apply font-inter text-[16px] font-normal not-italic leading-normal laptop:text-xl;
+	}
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 select[disabled] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 input:-internal-autofill-selected {
-    background-color: #f6eddc !important;
+	background-color: #edf4fc !important;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #f6eddc inset !important;
+	-webkit-box-shadow: 0 0 0 30px #edf4fc inset !important;
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: #586875 !important;
+	-webkit-text-fill-color: #79838e !important;
 }

@@ -1,14 +1,20 @@
+import { AuthRoutes } from 'auth';
+import { HomeZDC } from 'pages';
 import { BrowserRouter, Route, Routes } from 'react-router';
-
-import { LoginLayout } from '../auth/layout';
 
 export const AppRouter = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route
-					element={<LoginLayout />}
-					path='/'
+					index
+					element={<AuthRoutes />}
+					path='/*'
+				/>
+
+				<Route
+					element={<HomeZDC />}
+					path='/home'
 				/>
 			</Routes>
 		</BrowserRouter>
