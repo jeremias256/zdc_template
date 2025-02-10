@@ -16,6 +16,7 @@ export default defineConfig({
 			auth: resolve(__dirname, 'src/features/auth'),
 			components: resolve(__dirname, 'src/components'),
 			pages: resolve(__dirname, 'src/features/pages'),
+			fb: resolve(__dirname, 'src/firebase'),
 			//probar
 			api: resolve(__dirname, 'src/api'),
 			router: resolve(__dirname, 'src/routes'),

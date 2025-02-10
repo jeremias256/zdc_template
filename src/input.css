@@ -3,27 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-	/* colores */
-	.primary {
-		@apply text-primary;
+	.text_error {
+		@apply text-center font-inter text-base font-normal not-italic leading-normal text-secondary;
 	}
-
-	.secondary {
-		@apply text-secondary;
-	}
-
-	.success {
-		@apply text-success;
-	}
-
-	.warning {
-		@apply text-warning;
-	}
-
-	.text {
-		@apply text-text;
-	}
-
 	/* font */
 	.font_20_400 {
 		@apply font-inter text-xl font-normal not-italic leading-normal;

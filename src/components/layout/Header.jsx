@@ -9,8 +9,8 @@ export const Header = () => {
 		setOpen(!open);
 	};
 	return (
-		<header className='bg-secondary px-2 py-2 h-[78px] flex items-center'>
-			<nav className='flex items-end justify-between gap-2 w-full'>
+		<header className='bg-secondary h-[78px] flex items-center'>
+			<nav className='max-w-[1280px] px-2 py-2 mx-auto flex items-end justify-between gap-2 w-full desktop:px-0'>
 				<div className='flex gap-1 laptop:gap-8 items-center'>
 					<div className='flex items-center justify-center'>
 						<p className='text-text text-logo leading-none font-bold'>ST</p>
