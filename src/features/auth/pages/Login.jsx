@@ -3,22 +3,19 @@ import { ButtonPrimary, ButtonWithIcon, CustomInput, Loader } from 'components';
 import { Form, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router';
-import { checkingAuthentication, startGoogleSignIn } from 'store';
+import { startGoogleSignIn, startLoginWithEmailPassword } from 'store';
 import * as Yup from 'yup';
 
 export const Login = () => {
 	const dispatch = useDispatch();
 	const { status, errorMessage } = useSelector(state => state.auth);
-	console.log('👀 - Login - errorMessage:', errorMessage);
 
 	const onSubmit = values => {
-		console.log('👀 - onSubmit - values:', values);
-		dispatch(checkingAuthentication(values.customerId, values.password));
+		dispatch(startLoginWithEmailPassword(values.email, values.password));
 	};
 
 	const onGoogleSignIn = values => {
-		console.log('GOOGLE BTN');
-		dispatch(startGoogleSignIn(values.customerId, values.password));
+		dispatch(startGoogleSignIn(values.email, values.password));
 	};
 
 	return (
@@ -40,32 +37,33 @@ export const Login = () => {
 					</h2>
 
 					<Formik
-						initialValues={{ customerId: '12345678', password: '1234$Abc' }}
+						initialValues={{
+							email: 'gab.menacho@gmail.com',
+							password: '1234$Abc',
+						}}
 						onSubmit={onSubmit}
 						validationSchema={Yup.object({
-							customerId: Yup.string()
-								.matches(/^\d+$/, 'Solo se permiten números')
-								.min(7, 'It must have at least 7 characters.')
-								.max(9, 'It cannot have more than 9 characters.')
-								.required('This field is required'),
+							email: Yup.string()
+								.email('Must be a valid email address')
+								.required('This field is required.'),
 							password: Yup.string()
-								.min(8, 'Debe tener al menos 8 caracteres')
-								.max(12, 'Debe tener 12 caracteres o menos')
+								.min(8, 'It must have at least 8 characters.')
+								.max(12, 'It cannot have more than 12 characters.')
 								.matches(
 									/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
 									'Debe contener al menos una mayúscula, un número y un carácter especial',
 								)
-								.required('Este campo es obligatorio'),
+								.required('This field is required.'),
 						})}>
 						{({ values }) => (
 							<Form className='mt-8 flex flex-col items-center justify-center gap-8'>
 								<CustomInput
-									id='customerId'
-									label='customer id'
+									id='email'
+									label='email'
 									help='I don t know my customer number'
-									name='customerId'
-									placeholder='1234567'
-									type='number'
+									name='email'
+									placeholder='gab.menacho@gmail.com'
+									type='text'
 								/>
 
 								<CustomInput

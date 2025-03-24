@@ -13,15 +13,16 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			assets: resolve(__dirname, 'src/assets'),
-			auth: resolve(__dirname, 'src/features/auth'),
 			components: resolve(__dirname, 'src/components'),
 			pages: resolve(__dirname, 'src/features/pages'),
 			fb: resolve(__dirname, 'src/firebase'),
+			auth: resolve(__dirname, 'src/features/auth'),
+			customer: resolve(__dirname, 'src/features/customer'),
+			hooks: resolve(__dirname, 'src/hooks'),
+			router: resolve(__dirname, 'src/routes'),
+			store: resolve(__dirname, 'src/store'),
 			//probar
 			api: resolve(__dirname, 'src/api'),
-			router: resolve(__dirname, 'src/routes'),
-			hooks: resolve(__dirname, 'src/hooks'),
-			store: resolve(__dirname, 'src/store'),
 			env: resolve(__dirname, 'src/Env'),
 		},
 	},

@@ -10,8 +10,20 @@
 	.font_20_400 {
 		@apply font-inter text-xl font-normal not-italic leading-normal;
 	}
+	.font_18_700 {
+		@apply font-inter text-lg font-bold not-italic leading-normal;
+	}
+	.font_18_400 {
+		@apply font-inter text-lg font-normal not-italic leading-normal;
+	}
 	.font_16_400 {
-		@apply font-inter text-[16px] font-normal not-italic leading-normal laptop:text-xl;
+		@apply font-inter text-[16px] font-normal not-italic leading-normal;
+	}
+	.active {
+		@apply text-primary;
+	}
+	.pending {
+		@apply text-text;
 	}
 }
 

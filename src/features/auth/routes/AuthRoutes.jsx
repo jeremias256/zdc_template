@@ -8,11 +8,11 @@ export const AuthRoutes = () => {
 				<Route
 					index
 					element={<Login />}
-					path='login'
+					path='/login'
 				/>
 				<Route
 					element={<SignUp />}
-					path='signup'
+					path='/signup'
 				/>
 			</Route>
 		</Routes>

@@ -1,6 +1,7 @@
 import imgBackgroundLogin from 'assets/login_fondo.png';
 import { ButtonPrimary, CustomInput, Loader } from 'components';
 import { Form, Formik } from 'formik';
+import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router';
 import { startCreatingUserWithEmailPassword } from 'store';
@@ -9,17 +10,21 @@ import * as Yup from 'yup';
 export const SignUp = () => {
 	const dispatch = useDispatch();
 	const { status, errorMessage } = useSelector(state => state.auth);
-
+	const isCheckingAuthentication = useMemo(
+		() => status === 'checking',
+		[status],
+	);
 	const onSubmit = values => {
-		console.log('👀 - onSubmit - values:', values);
 		dispatch(
 			startCreatingUserWithEmailPassword(
-				values.name,
+				values.displayName,
 				values.email,
 				values.password,
 			),
 		);
 	};
+
+	// useEffect(() => {}, [errorMessage]);
 	return (
 		<main className='py-6 px-2 laptop:py-auto desktop:px-0 laptop:py-16'>
 			<div className='max-w-[1280px] flex justify-center gap-[100px] mx-auto'>
@@ -40,14 +45,14 @@ export const SignUp = () => {
 
 					<Formik
 						initialValues={{
-							name: 'jeremias menacho',
+							displayName: 'jeremias menacho',
 							email: 'gab.menacho@gmail.com',
 							customerId: '123456789',
 							password: '1234$Abc',
 						}}
 						onSubmit={onSubmit}
 						validationSchema={Yup.object({
-							name: Yup.string()
+							displayName: Yup.string()
 								.matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/, 'Solo se permiten letras')
 								.min(2, 'It must have at least 2 characters.')
 								.max(50, 'It cannot have more than 50 characters.')
@@ -56,7 +61,7 @@ export const SignUp = () => {
 								.email('It must be a valid email.')
 								.required('This field is required'),
 							customerId: Yup.string()
-								.matches(/^\d+$/, 'Solo se permiten números')
+								.matches(/^\d+$/, 'Only numbers are allowed')
 								.min(7, 'It must have at least 7 characters.')
 								.max(9, 'It cannot have more than 9 characters.')
 								.required('This field is required'),
@@ -71,10 +76,10 @@ export const SignUp = () => {
 						})}>
 						<Form className='mt-8 flex flex-col items-center justify-center gap-8'>
 							<CustomInput
-								id='name'
+								id='displayName'
 								label='First and last name'
 								help=''
-								name='name'
+								name='displayName'
 								placeholder='Pedro Choque'
 								type='text'
 							/>
@@ -104,7 +109,7 @@ export const SignUp = () => {
 								type='password'
 							/>
 
-							{status == 'checking' ? (
+							{isCheckingAuthentication ? (
 								<Loader />
 							) : (
 								<div className='flex flex-col gap-2 w-full'>

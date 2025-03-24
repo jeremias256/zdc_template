@@ -9,12 +9,12 @@ export const CustomInput = ({ help = false, label = false, ...props }) => {
 		<fieldset className='max-w-[300px] relative flex flex-col items-center'>
 			<input
 				autoComplete='false'
-				className='peer top-0 text-text rounded-tr-2xl rounded-b-2xl bg-secondary h-12 pl-3 pt-3 focus:outline-none focus:border-2 focus:border-secondary min-w-[300px] font-inter'
+				className='focus:border-2 rounded-b-2xl peer min-w-[300px] text-text rounded-tr-2xl bg-secondary h-12 pl-3 pt-3 focus:outline-none top-0 focus:border-secondary font-inter'
 				{...field}
 				{...props}
 			/>
 			{meta.touched && meta.error ? (
-				<div className='mt-2 rounded-lg p-1 text_error'>{meta.error}</div>
+				<div className='mt-2 p-1 rounded-lg text_error'>{meta.error}</div>
 			) : null}
 			{label && (
 				<label

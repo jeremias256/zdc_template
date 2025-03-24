@@ -1,21 +1,38 @@
 import { AuthRoutes } from 'auth';
-import { HomeZDC } from 'pages';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { CustomerRoutes } from 'customer';
+import { useCheckAuth } from 'hooks';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 export const AppRouter = () => {
+	const status = useCheckAuth();
+
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route
-					index
-					element={<AuthRoutes />}
-					path='/*'
-				/>
-
-				<Route
-					element={<HomeZDC />}
-					path='/home'
-				/>
+				{status === 'authenticated' ? (
+					<>
+						<Route
+							element={<CustomerRoutes />}
+							path='/customer/*'
+						/>
+						<Route
+							path='*'
+							element={<Navigate to='/customer/home' />}
+						/>
+					</>
+				) : (
+					<>
+						<Route
+							index
+							element={<AuthRoutes />}
+							path='/auth/*'
+						/>
+						<Route
+							path='*'
+							element={<Navigate to='/auth/login' />}
+						/>
+					</>
+				)}
 			</Routes>
 		</BrowserRouter>
 	);
