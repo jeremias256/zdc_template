@@ -6,6 +6,7 @@ export const loadCustomer = async (uid = '') => {
     const querySnapshot = await getDocs(collection(FirebaseDB, `/${uid}/customer/status`));
     const status = [];
     querySnapshot.forEach((doc) => {
+        console.log("👀 - :9 - querySnapshot.forEach - doc:", doc);
         status.push(doc.data());
     });
     return status;

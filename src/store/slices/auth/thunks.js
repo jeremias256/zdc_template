@@ -12,6 +12,7 @@ export const checkingAuthentication = (id, password) => {
 		dispatch(chekingCredentials());
 	};
 };
+
 export const startGoogleSignIn = (id, password) => {
 	return async dispatch => {
 		dispatch(chekingCredentials());

@@ -24,7 +24,7 @@ export const CustomerLayout = () => {
 	};
 	return (
 		//grid grid-rows-[auto 1fr auto] min-h-screen
-		<div className='flex flex-col bg-secondary min-h-screen'>
+		<div className='grid grid-rows-[auto 1fr auto] bg-secondary min-h-screen'>
 			<Header />
 			<div className='flex flex-col justify-center'>
 				<div className='bg-gradient-to-r from-custom-light-blue via-primary to-custom-dark-blue'>

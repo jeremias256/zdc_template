@@ -5,6 +5,7 @@
 	border: 8px solid #edf4fc;
 	border-right-color: #1958d7;
 	animation: l2 1s infinite linear;
+	margin: 24px 0;
 }
 
 @keyframes l2 {

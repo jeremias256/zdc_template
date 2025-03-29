@@ -19,6 +19,18 @@
 	.font_16_400 {
 		@apply font-inter text-[16px] font-normal not-italic leading-normal;
 	}
+	.font_14_700 {
+		@apply font-inter text-[14px] font-bold not-italic leading-normal;
+	}
+	.font_14_400 {
+		@apply font-inter text-[14px] font-normal not-italic leading-normal;
+	}
+	.custom_label {
+		@apply font-inter text-[14px] font-normal not-italic leading-normal text-[#9EAEC7];
+	}
+	.custom_error {
+		@apply font-inter text-lg font-bold not-italic leading-normal text-warning;
+	}
 	.active {
 		@apply text-primary;
 	}
