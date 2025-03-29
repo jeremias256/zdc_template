@@ -1,6 +1,5 @@
-import { AuthRoutes } from 'auth';
+import { AuthRoutes, useCheckAuth } from 'auth';
 import { CustomerRoutes } from 'customer';
-import { useCheckAuth } from 'hooks';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 export const AppRouter = () => {

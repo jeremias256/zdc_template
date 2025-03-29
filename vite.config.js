@@ -18,7 +18,6 @@ export default defineConfig({
 			fb: resolve(__dirname, 'src/firebase'),
 			auth: resolve(__dirname, 'src/features/auth'),
 			customer: resolve(__dirname, 'src/features/customer'),
-			hooks: resolve(__dirname, 'src/hooks'),
 			router: resolve(__dirname, 'src/routes'),
 			store: resolve(__dirname, 'src/store'),
 			//probar
